@@ -114,13 +114,7 @@ resetButton.addEventListener("click", function() {
 
 cvChoice.addEventListener("change", function() {
     if (cvChoice.checked) {
-        const link = document.createElement("a");
-        link.href = "cv.pdf";
-        link.download = "CV.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        cvChoice.checked = false;
+        window.open("cv.pdf", "_blank", "noopener,noreferrer");
     }
 });
 
