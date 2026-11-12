@@ -1,0 +1,223 @@
+
+:root {
+    --navy: #284774;
+    --cream: #ede8da;
+    --terracotta: #c77b65;
+    --white: #ffffff;
+    --muted: #5c6a7c;
+    --line: #d8d6cf;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--navy);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+.page {
+    max-width: 1120px;
+    margin: auto;
+    padding: 64px 24px 30px;
+}
+
+/* Header */
+
+.intro {
+    margin-bottom: 32px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--terracotta);
+}
+
+h1 {
+    font-size: clamp(36px, 5vw, 64px);
+    letter-spacing: -2px;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.intro > p:last-child {
+    color: var(--muted);
+}
+
+/* Website layout */
+
+.layout {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.side {
+    display: grid;
+    gap: 20px;
+}
+
+/* White cards */
+
+.panel {
+    background-color: var(--white);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 8px 30px rgba(40, 71, 116, 0.05);
+}
+
+/* Checklist */
+
+.section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+#progress-label {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.progress-track {
+    height: 10px;
+    background-color: #e7e8e8;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: var(--terracotta);
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+.task {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+}
+
+.task input,
+.cv-choice input {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    accent-color: var(--terracotta);
+    cursor: pointer;
+}
+
+.task span {
+    font-size: 16px;
+}
+
+.task input:checked + span {
+    text-decoration: line-through;
+    color: #84909d;
+}
+
+/* Traditional CV option */
+
+.cv-choice {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Personal introduction */
+
+.serious p {
+    font-size: 15px;
+    color: #40536c;
+}
+
+.signature {
+    font-weight: bold;
+    color: var(--navy);
+}
+
+/* Congratulations message */
+
+.celebration {
+    margin-top: 20px;
+    background-color: #f7f2e8;
+    border-left: 4px solid var(--terracotta);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.celebration[hidden] {
+    display: none;
+}
+
+/* Reset button */
+
+.reset {
+    border: 1px solid var(--navy);
+    border-radius: 8px;
+    padding: 10px 16px;
+    background-color: transparent;
+    color: var(--navy);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.reset:hover {
+    background-color: var(--navy);
+    color: white;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    padding-top: 35px;
+}
+
+/* Mobile-friendly layout */
+
+@media (max-width: 740px) {
+
+    .page {
+        padding: 32px 16px;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 22px;
+    }
+
+    .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}

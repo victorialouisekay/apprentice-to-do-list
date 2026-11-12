@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Recruiter's To Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="page">
+
+        <header class="intro">
+
+            <p class="eyebrow">A VERY SERIOUS JOB APPLICATION</p>
+
+            <h1>the recruiter's to do list ★</h1>
+
+            <p>helping you make excellent hiring decisions, one tick at a time.</p>
+
+        </header>
+
+        <div class="layout">
+
+            <section class="panel checklist">
+
+                <div class="section-head">
+
+                    <h2>your checklist</h2>
+
+                    <span id="progress-label">0 of 8 completed</span>
+
+                </div>
+
+                <div class="progress-track" id="progress-track"
+                     role="progressbar"
+                     aria-label="Recruitment checklist progress"
+                     aria-valuemin="0"
+                     aria-valuemax="100"
+                     aria-valuenow="0">
+
+                    <div class="progress-fill" id="progress-fill"></div>
+
+                </div>
+
+                <div id="task-list" class="tasks"></div>
+
+                <div id="celebration" class="celebration" hidden>
+
+                    <h3>congratulations!</h3>
+
+                    <p>you've successfully completed your recruitment to do list.</p>
+
+                    <p>your reward? one very grateful, hardworking apprentice who promises to work hard and do her absolute best.</p>
+
+                </div>
+
+                <button id="reset" class="reset" type="button">
+                    reset checklist
+                </button>
+
+            </section>
+
+            <aside class="side">
+
+                <section class="panel cv-panel">
+
+                    <h2>I'd prefer less humour</h2>
+
+                    <label class="cv-choice">
+
+                        <input type="checkbox" id="cv-choice">
+
+                        <span>click right here! I promise I have taken my cv seriously.</span>
+
+                    </label>
+
+                </section>
+
+                <section class="panel serious">
+
+                    <h2>okay, but seriously...</h2>
+
+                    <p>
+                        I'm applying for an apprenticeship because I genuinely want to build a career in software development.
+                        I've enjoyed creating and customising things online since I was young,
+                        from personalising websites to running my own online businesses.
+                    </p>
+
+                    <p>
+                        I'm at the very beginning of my coding journey. I've been learning through
+                        YouTube tutorials, plenty of Google searches and some help from AI
+                        to develop and refine the code for this project.
+                        I've been working hard learning the fundamentals of coding,
+                        filling pages of my notebook along the way.
+                        I still have a lot to learn, and that's exactly why
+                        I'm excited about an apprenticeship.
+                    </p>
+
+                    <p class="signature">
+                        thank you for considering my application.
+                    </p>
+
+                </section>
+
+            </aside>
+
+        </div>
+
+        <footer>
+            made with determination, beginner level JavaScript and a slightly ambitious amount of optimism.
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
